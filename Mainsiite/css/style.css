@@ -54,7 +54,7 @@ body {
 .logo a h1{
 	color:#fff;
 	font-size: 2.1em;
-	padding: 0.60em 1em 0.55em 1em;
+	padding: 0.50em 1em 0.45em 1em;
 	background: #EB6841;
 	float: left;
 	border-bottom: 5px solid #EB6841;
@@ -73,33 +73,33 @@ body {
 }
 /* start header_btm */
 .header_btm{
-	background: #00A0B0;
+	background: #ef8862;
 }
 /* start menu */
 .h_menu{
 	float:left;
 }
 .h_menu ul li{
-	margin-right:20px;
+	margin-right:5px;
 	float: left;
 }
 .h_menu ul li.active a{
-	color: #74D7E1;
+	color: #f2a487;
 }
 .h_menu ul li a{
 	display:block;
-	padding: 33px 15px;
+	padding: 25px 15px;
 	text-transform: uppercase;
 	font-size: 0.925em;
 	color:#fff;
-	font-weight: 600;
+	font-weight: 450;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
 .h_menu ul li a:hover{
-	color: #74D7E1;
+	color: #ea6839;
 }
 /*search*/
 .h_search{
@@ -252,7 +252,7 @@ body {
 }
 /**********services***********/
 .Recent-wroks{
-	margin: 4% 0;
+	margin: 0;
 }
 .Recent-wrok{
 	text-align:center;
@@ -262,7 +262,7 @@ body {
 	font-size: 1.8em;
 	color: #6F6F6F;
 	text-transform: uppercase;
-	margin: 1% 0% 2% 0%;
+	margin: 0%;
 	text-align: left;
 	font-weight: 600;
 }
@@ -1294,7 +1294,7 @@ ul.sidebar_1 li {
 	color: #414A5A;
 	font-size: 1.6em;
 	font-weight: normal;
-	margin: 1em 0em;
+	margin: 0em;
 }
 .images_1
 {
