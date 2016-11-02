@@ -78,7 +78,74 @@
 </div>
 <div class="testimonial">
 <!-- start last_posts -->
-<?php include 'container/feedback.php' ?>
+<?php 
+	require "database/database.php";
+	$error = FALSE;
+	$name = $email = $feedback = "";
+	if (isset($_POST['submit'])){
+		if (empty($_POST['name'])){
+			$error = TRUE;
+		}else{
+			$name = $_POST['name'];
+		}
+		if (empty($_POST['email'])){
+			$error = TRUE;
+		}else{
+			$email = $_POST['email'];
+		}
+		if (empty($_POST['feedback'])){
+			$error = TRUE;
+		}else{
+			$feedback = $_POST['feedback'];
+		}
+		if ($error == FALSE){
+			$sql = "INSERT INTO `feedback`(`name`, `email`, `feedback`) VALUES ('$_POST[name]','$_POST[email]','$_POST[feedback]')";
+			if (mysqli_query($connect,$sql)){
+				echo "<script type='text/javascript'>alert('successfully datatranfer!')</script>";
+				die;
+			}
+		}else{
+			echo "<script type='text/javascript'>alert('Not successfully datatranfer!')</script>";
+		}
+	}
+	
+?>
+<div class="get_in_touch"><!-- start last_posts -->
+	<div class="wrap">
+		<h5 class="heading">Your FEED-BACK</h5>
+		<div class="get-left">
+			<p>Please provide us with your feedback below</p>
+			<p></p>
+		</div>
+		<div class="get-right">
+			<form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
+					<ul>
+						<li class="name">
+							<a href="#" class="icon user"> </a>
+							<input type="text" name="name" placeholder="Your name" required="">
+							<div class="clear"> </div>
+						</li> 
+						<li class="email_1">
+							<a href="#" class="icon mail"> </a>
+							<input type="email" name="email" placeholder="yourname@email.com" required="">
+							<div class="clear"> </div>
+						</li> 
+							<div class="clear"> </div>
+							<li>
+							<textarea class="plain buffer" name="feedback" placeholder="Your FEED-BACK here"></textarea>
+							</li>
+							<input class="send" type="submit" name="submit">
+							<!--
+						<div class="send">
+								<a href="#">SEND</a>
+						</div>
+						-->
+					</ul>
+			</form>
+		</div>
+		<div class="clear"> </div>
+		</div>
+</div>
 <?php include 'container/footer.php'; ?>
 </body>
 </html>
