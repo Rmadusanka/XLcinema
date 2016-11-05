@@ -1,6 +1,3 @@
-
-
-
 <?php
 //Start session
 session_start();
@@ -106,17 +103,88 @@ unset($_SESSION['SESS_LAST_NAME']);
 
 
 
-<h1>Selection</h1>
-
-<a href="tSelection.php">Make your Selection</a>
-<a href="selectPreferences.php">Select Preferences</a>
-<a href="confirmBooking.php">Confirm Booking</a>
-<a href="makePayment.php">Make Payment</a>
 
 
 
 
 
+<div class="container">
+    <div class="row ">
+        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+            <div class="panel-body">
+
+
+                <h5><b>Enter Details to Login</b></h5>
+                <br />
+
+                <form name="loginform" action="login_exec.php" method="post">
+                    <table width="309" border="0" align="center" cellpadding="2" cellspacing="5">
+                        <tr>
+                            <td colspan="2">
+                                <!--the code bellow is used to display the message of the input validation-->
+                                <?php
+                                if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+                                    echo '<ul class="err">';
+                                    foreach($_SESSION['ERRMSG_ARR'] as $msg) {
+                                        echo '<li>',$msg,'</li>';
+                                    }
+                                    echo '</ul>';
+                                    unset($_SESSION['ERRMSG_ARR']);
+                                }
+                                ?>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <div class="form-group input-group">
+                                <span class="input-group-addon"><i class="fa fa-tag"  ></i></span><!--for get small icon-->
+                                <input type="text" name="username" class="form-control" placeholder="Your Username " required/><!--for get input field-->
+                            </div>
+
+                        </tr>
+
+                        <tr>
+                            <div class="form-group input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
+                                <input type="password" name="password" class="form-control"  placeholder="Your Password" required/>
+                            </div>
+                        </tr>
+
+
+                        <tr>
+                            <!--for checkme & forgot password?-->
+                            <div class="form-group">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" /> Remember me
+                                </label>
+                                            <span class="pull-right">
+                                                   <a href="mainLogin.php" >Forget password ? </a>
+                                            </span>
+                            </div>
+                            <!--close checkme-->
+                        </tr>
+
+
+                        <tr>
+                            <div align="center">
+                                <input name="" type="submit" class="btn btn-primary" value="Log In" />
+                            </div>
+                        </tr>
+                        <br>
+                        <tr>
+                            <div align="center">
+                                <a href="registerUser.php">Create New Account</a>
+                            </div>
+                        </tr>
+
+                    </table>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -131,7 +199,11 @@ unset($_SESSION['SESS_LAST_NAME']);
 
 
 
-<br><br><br>
+
+
+
+
+
 
 
 
