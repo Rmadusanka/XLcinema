@@ -132,7 +132,7 @@
 						</li> 
 							<div class="clear"> </div>
 							<li>
-							<textarea class="plain buffer" name="feedback" placeholder="Your FEED-BACK here"></textarea>
+							<textarea class="plain buffer" name="feedback" placeholder="Your FEED-BACK here" required=""></textarea>
 							</li>
 							<input class="send" type="submit" name="submit">
 							<!--
