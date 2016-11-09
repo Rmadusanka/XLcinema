@@ -24,13 +24,13 @@ include("connect.php");
 
 
     $update = mysqli_query($bd,"INSERT INTO user_details(title,fname,lname,gender,nic,address,city,district,mobile,smsAlert,
-        cphone,username,password,cpassword,email,cemail)VALUES('$title','$fname','$lname','$gender','$nic','$address','$city',
-        '$district','$mobile','$smsAlert','$cphone','$username','$password','$cpassword','$email','$cemail')");
+        cphone,username,password,cpassword,email,cemail,created)VALUES('$title','$fname','$lname','$gender','$nic','$address','$city',
+        '$district','$mobile','$smsAlert','$cphone','$username','$password','$cpassword','$email','$cemail',now())");
 
     if ($update) {
         $msg = "Successfully Updated!!";
         echo "<script type='text/javascript'>alert('$msg');</script>";
-        header('Location:registerUser.php');
+        header('Location:registerUserValidation.php');
         echo $title;
     } else {
         $errormsg = "Something went wrong, Try again";

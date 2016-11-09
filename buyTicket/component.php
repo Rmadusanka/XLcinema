@@ -19,9 +19,8 @@ unset($_SESSION['SESS_LAST_NAME']);
     <title>Excel Cinema</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-    <link href="../Mainsiite/css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="../Mainsiite/css/owl.carousel.css" rel="stylesheet">
+
+
 
     <!-- BOOTSTRAP STYLES-->
     <link href="css/bootstrap.css" rel="stylesheet" />
@@ -30,154 +29,33 @@ unset($_SESSION['SESS_LAST_NAME']);
     <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
-    <!-- //Owl Carousel Assets -->
-    <!--768px-menu-->
-    <link type="text/css" rel="stylesheet" href="../Mainsiite/css/jquery.mmenu.all.css" />
-    <script type="text/javascript" src="../Mainsiite/js/jquery.mmenu.js"></script>
-    <script type="text/javascript">
-        //	The menu on the left
-        $(function() {
-            $('nav#menu-left').mmenu();
-        });
-    </script>
-    <!--//768px-menu-->
+
 </head>
-<body>
-<!-- start header -->
-<div class="header_bg">
-    <div class="wrap">
-        <div class="header">
-            <div class="logo">
-                <a href="index.html">
-                    <h1>EXCEL CINEMA</h1>
-                    <div class="clear"> </div>
-                </a>
+<body style="background-color:lightpink">
+
+
+<div class="container">
+    <div class="row">
+        <h1>Selection</h1>
+
+            <div class="col-md-3 ">
+                <a href="tSelection.php">Make your Selection</a>
             </div>
-            <div class="text">
-                <p>Join With Us<br></p>
+             <div class="col-md-3">
+                <a href="selectPreferences.php">Select Preferences</a><br>
+             </div>
+            <div class="col-md-3">
+                 <a href="confirmBooking.php">Confirm Booking</a><br>
             </div>
-            <div class="clear"> </div>
-        </div>
+            <div class="col-md-3">
+                <a href="makePayment.php">Make Payment</a>
+            </div>
+
     </div>
 </div>
-<!-- start header -->
-<div class="header_btm">
-    <div class="wrap">
-        <!--start-768px-menu-->
-        <div id="page">
-            <div id="header">
-                <a class="navicon" href="#menu-left"> </a>
-            </div>
-            <nav id="menu-left">
-                <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="services.html">Gallary</a></li>
-                    <li><a href="pages.html">Movies</a></li>
-                    <li><a href="blog.html">Offers</a></li>
-                    <li><a href="signIn.php">Buy Tickets</a></li>
-                    <li><a href="blog.html">News</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!--start-768px-menu-->
-        <div class="header_sub">
-            <div class="h_menu">
-                <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="services.html">Gallary</a></li>
-                    <li><a href="pages.html">Movies</a></li>
-                    <li><a href="blog.html">Offers</a></li>
-                    <li><a href="signIn.php">Buy Tickets</a></li>
-                    <li><a href="blog.html">News</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                </ul>
-            </div>
-            <div class="clear"> </div>
-        </div>
-    </div>
-</div>
-<!--start-banner-->
 
 
 
 
-
-
-<h1>Selection</h1>
-
-<a href="tSelection.php">Make your Selection</a>
-<a href="selectPreferences.php">Select Preferences</a>
-<a href="confirmBooking.php">Confirm Booking</a>
-<a href="makePayment.php">Make Payment</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br>
-
-
-
-
-
-<!--footer ------------------------------------->
-<div class="footer">
-    <div class="wrap">
-        <div class="footer-left">
-            <h3>About Excel Cinema</h3>
-            <p>EAP Films is the market leader in the Sri Lankan Film Industry providing an outstanding entertainment platform for film-goers.
-            </p><p>As a truly strong company we manage and operate 45 modern cinemas under the circuit and possess the best theaters in the Island which include Excel Cinema etc.</p>
-
-            <div class="detail">
-                <ul>
-                    <li><a href="#">home/</a></li>
-                    <li><a href="#">term of services/</a></li>
-                    <li><a href="#">license/</a></li>
-                    <li><a href="#">pess</a></li>
-                    <div class="clear"> </div>
-                </ul>
-            </div>
-
-
-        </div>
-        <div class="footer-right">
-            <h3>Contact Us</h3>
-            <div class="comments1">
-                <p>Excel Cinema	-	+94117452855</p>
-                <br><br><br><br>
-            </div>
-            <div class="soc_icons soc_icons1">
-                <ul>
-                    <li><a class="icon1" href="#"> </a> </li>
-                    <li><a class="icon2" href="#"> </a></li>
-                    <li><a class="icon3" href="#"> </a></li>
-                    <div class="clear"> </div>
-                </ul>
-            </div>
-
-        </div>
-        <div class="clear"> </div>
-    </div>
-</div>
-<div class="copy">
-    <p>© 2016 Programming IV Project <a href="#" target="_blank">ForTranX</a></p>
-</div>
 </body>
 </html>
