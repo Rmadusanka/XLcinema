@@ -41,7 +41,7 @@ if($password == '') {
 if($errflag) {
     $_SESSION['ERRMSG_ARR'] = $errmsg_arr;
     session_write_close();
-    header("location: index.php");
+    header("location: signIn.php");
     exit();
 }
 
@@ -70,7 +70,7 @@ if($result) {
         if($errflag) {
             $_SESSION['ERRMSG_ARR'] = $errmsg_arr;
             session_write_close();
-            header("location: mainLogin.php");
+            header("location: signIn.php");
             exit();
         }
     }

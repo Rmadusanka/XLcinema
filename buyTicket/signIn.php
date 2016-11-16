@@ -18,32 +18,48 @@ unset($_SESSION['SESS_LAST_NAME']);
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 
-    <!-- BOOTSTRAP STYLES-->
+    <!--BOOTSTRAP STYLES-->
     <link href="css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
     <link href="css/font-awesome.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
+
+    <link href="../Mainsiite/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../Mainsiite/css/owl.carousel.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../Mainsiite/css/magnific-popup.css">
+    <script type="text/javascript" src="../Mainsiite/js/jquery.min.js"></script>
+    <script src="../Mainsiite/js/owl.carousel.js"></script>
+
     </head>
 
 
-<body style="background-color:lightpink">
+
+<!--<body style="background-color:lightpink">-->
+<body style="background-color:#f7e1b5">
+
+
+<?php include '../Mainsiite/container/header.php'; ?>
+<?php include '../Mainsiite/container/menubar.php'; ?>
+<?php include '../Mainsiite/container/slider.php'; ?>
+
+
 <div class="container">
     <div class="row ">
-        <h1><b>XLCinema - Buy Ticket</b></h1>
+        <h1 align="center"><b>XLCinema - Buy Ticket</b></h1>
         <div class="col-md-4">
             <div class="panel-body">
 
 
                 <br>
-                <h5><b>Enter Details to Login</b></h5>
+                <h5 align="center"><b>Enter Details to Login</b></h5>
                 <br />
 
                 <form name="loginform" action="login_exec.php" method="post">
-                    <table width="309" border="0" align="center" cellpadding="2" cellspacing="5">
+                    <table width="400" border="0" align="center" cellpadding="2" cellspacing="5">
                         <tr>
-                            <td colspan="2">
+                            <td>
                                 <!--the code bellow is used to display the message of the input validation-->
                                 <?php
                                 if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
@@ -60,45 +76,34 @@ unset($_SESSION['SESS_LAST_NAME']);
 
 
                         <tr>
-                            <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="fa fa-tag"  ></i></span><!--for get small icon-->
-                                <input type="text" name="username" class="form-control" placeholder="Your Username " required/><!--for get input field-->
-                            </div>
+
+                                <td><label >Username</label></td>
+                                <td><input type="text" name="username"  placeholder="Your Username " required/></td><!--for get input field-->
+
 
                         </tr>
 
                         <tr>
-                            <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
-                                <input type="password" name="password" class="form-control"  placeholder="Your Password" required/>
-                            </div>
+
+                                <td><label>Password</label></td>
+                                <td><input type="password" name="password"   placeholder="Your Password" required/></td>
+
                         </tr>
 
 
-                        <tr>
-                            <!--for checkme & forgot password?-->
-                            <div class="form-group">
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" /> Remember me
-                                </label>
-                                            <span class="pull-right">
-                                                   <a href="mainLogin.php" >Forget password ? </a>
-                                            </span>
-                            </div>
-                            <!--close checkme-->
-                        </tr>
+
 
 
                         <tr>
-                            <div align="center">
-                                <input name="" type="submit" class="btn btn-primary" value="Log In" />
-                            </div>
+                            <td align="center">
+                                <input name="" type="submit" width="200" value="Log In" />
+                            </td>
                         </tr>
-                        <br>
+                        <tr></tr>
                         <tr>
-                            <div align="center">
-                                <a href="registerUser.php">Create New Account</a>
-                            </div>
+                            <td align="center">
+                                <a href="registerUserValidation.php">Create New Account</a>
+                            </td>
                         </tr>
 
                     </table>
@@ -111,6 +116,7 @@ unset($_SESSION['SESS_LAST_NAME']);
 
 
 
+<?php include '../MainSiite/container/footer.php'; ?>
 
 
 </body>

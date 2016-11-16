@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-    <!-- BOOTSTRAP STYLES-->
+    <!-- BOOTSTRAP STYLES
     <link href="../css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
     <link href="../css/font-awesome.css" rel="stylesheet" />
@@ -20,14 +20,14 @@
 <div class="container">
 
     <div class="row ">
-        <h1><b>XLCinema - Details Of User Account</b></h1>
+        <h1 align="center"><b>XLCinema - Details Of User Account</b></h1>
         <div class="col-md-10">
             <div class="panel-body">
 
 
-                <br>
-                <h5><b>User Details</b></h5>
-                <br />
+
+                <h5 style="font-size: medium"><b>User Details</b></h5>
+
 
 
 
@@ -48,7 +48,7 @@ while($userrow=mysqli_fetch_array($select))
 
     ?>
 
-    <div class="display">
+    <div class="display" >
         <p> USER NAME : <span style="color: #125acd"><?php echo $fname; ?></span>
             <a href="deleteUser.php?id=<?php echo $id; ?>"
                onclick="return confirm('Are you sure you wish to delete this Record?');">

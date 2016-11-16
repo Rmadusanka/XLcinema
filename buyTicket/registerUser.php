@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-    <!-- BOOTSTRAP STYLES-->
-    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- BOOTSTRAP STYLES
+    <link href="css/bootstrap.css" rel="stylesheet" />-->
     <!-- FONTAWESOME STYLES-->
     <link href="css/font-awesome.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->

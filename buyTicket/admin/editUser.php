@@ -1,3 +1,6 @@
+
+
+
 <?php
 ob_start();
 include('../connect.php');
@@ -51,7 +54,7 @@ ob_end_flush();
 
 </head>
 
-<body>
+<body style="background-color:lightpink">
 
 
 
@@ -59,8 +62,8 @@ ob_end_flush();
     <div id="page-inner">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="page-head-line" style="color: #500a6f">Admin Details</h1>
-                <h1 class="page-subhead-line">All administrators details </h1>
+                <h1 align="center" style="color: #500a6f">XLCinema</h1>
+
 
             </div>
         </div>
@@ -69,13 +72,11 @@ ob_end_flush();
         <div class="row">
             <div class="col-md-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Insert data to the Database
-                    </div>
+
 
                     <div class="panel-body">
-                        <h4 style="color: #ff0084">Update admin details</h4>
-                        <div style="margin-top: 20px;">
+                        <h4  align="center" style="color: #ff0084">Update admin details</h4>
+                        <div style="margin-top: 20px; " align="center">
                             <?php
                             if(isset($_GET['id']))
                             {
@@ -103,94 +104,100 @@ ob_end_flush();
                                     ?>
                                     <div class="display">
                                         <form action="" method="post" name="insertform">
-                                            <p>
-                                                <label for="title"  id="preinput">Title : </label>
-                                                <input type="text" name="eusertitle"  placeholder="Enter  title"
-                                                       value="<?php echo $title; ?>" id="inputid" />
-                                            </p>
-                                            <p>
-                                                <label  for="fname"  id="preinput"> First Name : </label>
-                                                <input type="text" name="euserfname"  placeholder="Enter  fname"
-                                                       value="<?php echo $fname; ?>" id="inputid" />
-                                            </p>
-                                            <p>
-                                                <label for="lname" id="preinput"> Last Name : </label>
-                                                <input type="text" name="euserlname"  placeholder="Enter lname"
-                                                       value="<?php echo $lname; ?>" id="inputid" />
-                                            </p>
-                                            <p>
-                                                <label  for="gender"  id="preinput"> Gender : </label>
-                                                <input type="text" name="eusergender"  placeholder="Enter gender"
-                                                       value="<?php echo $gender; ?>" id="inputid" />
-                                            </p>
-                                            <p>
-                                                <label  for="nic"  id="preinput"> NIC : </label>
-                                                <input type="text" name="eusernic"  placeholder="Enter nic"
-                                                       value="<?php echo $nic; ?>" id="inputid" />
-                                            </p>
-                                            <p>
-                                                <label  for="address"  id="preinput"> Address : </label>
-                                                <input type="text" name="euseraddress"  placeholder="Enter address"
-                                                       value="<?php echo $address; ?>" id="inputid" />
-                                            </p>
-                                            <p>
-                                                <label  for="city"  id="preinput"> City : </label>
-                                                <input type="text" name="eusercity"  placeholder="Enter city"
-                                                       value="<?php echo $city; ?>" id="inputid" />
-                                            </p>
-                                            <p>
-                                                <label  for="district"  id="preinput"> Distric : </label>
-                                                <input type="text" name="euserdistrict"  placeholder="Enter district"
-                                                       value="<?php echo $district; ?>" id="inputid" />
-                                            </p>
-                                            <p>
-                                                <label  for="mobile"  id="preinput"> Mobile : </label>
-                                                <input type="text" name="eusermobile"  placeholder="Enter mobile"
-                                                       value="<?php echo $mobile; ?>" id="inputid" />
-                                            </p>
-                                            <p>
-                                                <label  for="smsAlert"  id="preinput"> SmS Alert : </label>
-                                                <input type="text" name="eusersmsAlert"  placeholder="Enter smsAlert"
-                                                       value="<?php echo $smsAlert; ?>" id="inputid" />
-                                            </p>
-                                            <p>
-                                                <label  for="cphone"  id="preinput"> Confirm Phone : </label>
-                                                <input type="text" name="eusercphone"  placeholder="Enter cphone"
-                                                       value="<?php echo $cphone; ?>" id="inputid" />
-                                            </p>
-                                            <p>
-                                                <label  for="username"  id="preinput"> Username : </label>
-                                                <input type="text" name="euserusername"  placeholder="Enter username"
-                                                       value="<?php echo $username; ?>" id="inputid" />
-                                            </p>
-                                            <p>
-                                                <label  for="password"  id="preinput"> Password : </label>
-                                                <input type="password" name="euserpassword"  placeholder="Enter password"
-                                                       value="<?php echo $password; ?>" id="inputid" />
-                                            </p>
-                                            <p>
-                                                <label  for="cpassword"  id="preinput"> Confirm Password : </label>
-                                                <input type="password" name="eusercpassword"  placeholder="Enter cpassword"
-                                                       value="<?php echo $cpassword; ?>" id="inputid" />
-                                            </p>
-                                            <p>
-                                                <label  for="email"  id="preinput"> Email : </label>
-                                                <input type="email" name="euseremail"  placeholder="Enter email"
-                                                       value="<?php echo $email; ?>" id="inputid" />
-                                            </p>
-                                            <p>
-                                                <label  for="cemail"  id="preinput"> Confirm Email : </label>
-                                                <input type="email" name="eusercemail"  placeholder="Enter cemail"
-                                                       value="<?php echo $email; ?>" id="inputid" />
-                                            </p>
+                                            <table>
+                                                <tbody>
+                                                <tr>
+
+                                                <td><label for="title"  id="preinput">Title : </label></td>
+                                                <td><input type="text" name="eusertitle"  placeholder="Enter  title"
+                                                       value="<?php echo $title; ?>" id="inputid" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label  for="fname"  id="preinput"> First Name : </label></td>
+                                                <td><input type="text" name="euserfname"  placeholder="Enter  fname"
+                                                       value="<?php echo $fname; ?>" id="inputid" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="lname" id="preinput"> Last Name : </label></td>
+                                                <td><input type="text" name="euserlname"  placeholder="Enter lname"
+                                                       value="<?php echo $lname; ?>" id="inputid" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label  for="gender"  id="preinput"> Gender : </label></td>
+                                                <td><input type="text" name="eusergender"  placeholder="Enter gender"
+                                                       value="<?php echo $gender; ?>" id="inputid" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label  for="nic"  id="preinput"> NIC : </label></td>
+                                                <td><input type="text" name="eusernic"  placeholder="Enter nic"
+                                                       value="<?php echo $nic; ?>" id="inputid" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label  for="address"  id="preinput"> Address : </label></td>
+                                                <td><input type="text" name="euseraddress"  placeholder="Enter address"
+                                                       value="<?php echo $address; ?>" id="inputid" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label  for="city"  id="preinput"> City : </label></td>
+                                                <td><input type="text" name="eusercity"  placeholder="Enter city"
+                                                       value="<?php echo $city; ?>" id="inputid" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label  for="district"  id="preinput"> Distric : </label></td>
+                                                <td><input type="text" name="euserdistrict"  placeholder="Enter district"
+                                                       value="<?php echo $district; ?>" id="inputid" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label  for="mobile"  id="preinput"> Mobile : </label></td>
+                                                <td><input type="text" name="eusermobile"  placeholder="Enter mobile"
+                                                       value="<?php echo $mobile; ?>" id="inputid" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label  for="smsAlert"  id="preinput"> SmS Alert : </label></td>
+                                                <td><input type="text" name="eusersmsAlert"  placeholder="Enter smsAlert"
+                                                       value="<?php echo $smsAlert; ?>" id="inputid" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label  for="cphone"  id="preinput"> Confirm Phone : </label></td>
+                                                <td><input type="text" name="eusercphone"  placeholder="Enter cphone"
+                                                       value="<?php echo $cphone; ?>" id="inputid" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label  for="username"  id="preinput"> Username : </label></td>
+                                                <td><input type="text" name="euserusername"  placeholder="Enter username"
+                                                       value="<?php echo $username; ?>" id="inputid" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label  for="password"  id="preinput"> Password : </label></td>
+                                                <td><input type="password" name="euserpassword"  placeholder="Enter password"
+                                                       value="<?php echo $password; ?>" id="inputid" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label  for="cpassword"  id="preinput"> Confirm Password : </label></td>
+                                                <td><input type="password" name="eusercpassword"  placeholder="Enter cpassword"
+                                                       value="<?php echo $cpassword; ?>" id="inputid" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label  for="email"  id="preinput"> Email : </label></td>
+                                                <td><input type="email" name="euseremail"  placeholder="Enter email"
+                                                       value="<?php echo $email; ?>" id="inputid" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label  for="cemail"  id="preinput"> Confirm Email : </label></td>
+                                                <td><input type="email" name="eusercemail"  placeholder="Enter cemail"
+                                                       value="<?php echo $email; ?>" id="inputid" /></td>
+                                            </tr>
 
 
 
 
-                                            <p>
-                                                <input type="submit" name="update" value="Update" id="inputid1" />
-                                            </p>
+                                            <tr>
+                                                <td><input type="submit" name="update" value="Update" id="inputid1" /></td>
+                                            </tr>
+                                                </tbody>
+                                                </table>
                                         </form>
+
                                     </div>
                                 <?php } } ?>
                         </div>
