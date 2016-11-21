@@ -1,22 +1,15 @@
+<div class="ticketSelection-form">
+    <div class="row">
+         <br>
+        <h1 style="margin-left: 140px ;font-size: large;color: #cd0000"><b>Make your Selection</b></h1>
 
-
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Excel Cinema</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
-
-</head>
-<body>
+    </div>
 
 
 
 
-<br><br>
 <form method="post" action="" name="form1">
-    <table width="60%" border="0" cellspacing="0" cellpadding="0">
+    <table width="80%" border="0" cellspacing="0" cellpadding="0">
 
         <tr>
             <td width="150">Select Theater</td>
@@ -131,8 +124,8 @@
 
     </table>
 </form>
+</div>
 
-<br><br>
 <script>
     var obj;
     var obj2;
@@ -207,6 +200,3 @@
 
 
 
-
-</body>
-</html>

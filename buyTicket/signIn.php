@@ -37,18 +37,21 @@ unset($_SESSION['SESS_LAST_NAME']);
 
 
 <!--<body style="background-color:lightpink">-->
-<body style="background-color:#f7e1b5">
+<body style="background-color:powderblue">
 
 
 <?php include '../Mainsiite/container/header.php'; ?>
 <?php include '../Mainsiite/container/menubar.php'; ?>
-<?php include '../Mainsiite/container/slider.php'; ?>
+
 
 
 <div class="container">
     <div class="row ">
-        <h1 align="center"><b>XLCinema - Buy Ticket</b></h1>
-        <div class="col-md-4">
+        <br><br>
+        <h1 align="center" style="font-size: large ; color: #c7254e"><b>XLCinema - Buy Ticket</b></h1>
+        <div class="col-md-3">  </div>
+        <div class="col-md-6">
+
             <div class="panel-body">
 
 
@@ -94,19 +97,22 @@ unset($_SESSION['SESS_LAST_NAME']);
 
 
 
-                        <tr>
-                            <td align="center">
-                                <input name="" type="submit" width="200" value="Log In" />
-                            </td>
-                        </tr>
-                        <tr></tr>
-                        <tr>
-                            <td align="center">
-                                <a href="registerUserValidation.php">Create New Account</a>
-                            </td>
-                        </tr>
+
 
                     </table>
+
+
+<br>
+                            <input name="" type="submit"  style="width: 150px; margin-left: 100px" align="center" value="Log In" />
+
+
+
+
+
+                             <br><br><br>
+
+                            <h1 style=" margin-left: 100px"><a href="registerUserValidation.php">Create New Account</a></h1>
+
                 </form>
 
             </div>
@@ -115,6 +121,7 @@ unset($_SESSION['SESS_LAST_NAME']);
 </div>
 
 
+<br><br>
 
 <?php include '../MainSiite/container/footer.php'; ?>
 
