@@ -61,7 +61,7 @@
                   <li><a><i class="fa fa-edit"></i>Employee <span class="fa fa-chevron-down"></span></a>
                      <ul class="nav child_menu">
                       <li><a href="addEmp.php">Add Employee</a></li>
-                      <li><a href="empDetails.php">Employee Details</a></li>
+                      <li><a href="empDeails.php">Employee Details</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i>Theater <span class="fa fa-chevron-down"></span></a>
@@ -245,6 +245,5 @@
       });
     </script>
     <!-- /validator -->
-    <?php mysqli_close($conn); ?>
   </body>
 </html>
