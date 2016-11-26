@@ -55,17 +55,13 @@
                   <li><a><i class="fa fa-edit"></i>Admin <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="addAdmin.php">Add Admin</a></li>
-                      <li><a href="searchAdmin.php">Search Admin</a></li>
-                      <li><a href="modifyAdmin.php">Modify Admin</a></li>
-                      <li><a href="removeAdmin.php">Remove Admin</a></li>
+                      <li><a href="adminDetails.php">Admin Details</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i>Employee <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
+                     <ul class="nav child_menu">
                       <li><a href="addEmp.php">Add Employee</a></li>
-                      <li><a href="searchEmp.php">Search Employee</a></li>
-                      <li><a href="modifyEmpSearch.php">Modify Employee</a></li>
-                      <li><a href="removeEmp.php">Remove Employee</a></li>
+                      <li><a href="empDetails.php">Employee Details</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i>Theater <span class="fa fa-chevron-down"></span></a>

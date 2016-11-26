@@ -78,17 +78,13 @@ require_once 'connectionF.php';
                   <li><a><i class="fa fa-edit"></i>Admin <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="addAdmin.php">Add Admin</a></li>
-                      <li><a href="searchAdmin.php">Search Admin</a></li>
-                      <li><a href="modifyAdmin.php">Modify Admin</a></li>
-                      <li><a href="removeAdmin.php">Remove Admin</a></li>
+                      <li><a href="adminDetails.php">Admin Details</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i>Employee <span class="fa fa-chevron-down"></span></a>
                      <ul class="nav child_menu">
                       <li><a href="addEmp.php">Add Employee</a></li>
-                      <li><a href="searchEmp.php">Search Employee</a></li>
-                      <li><a href="modifyEmpSearch.php">Modify Employee</a></li>
-                      <li><a href="removeEmp.php">Remove Employee</a></li>
+                      <li><a href="empDetails.php">Employee Details</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i>Theater <span class="fa fa-chevron-down"></span></a>
@@ -164,26 +160,26 @@ require_once 'connectionF.php';
                   </div>
                   <div class="x_content">
 
-                    <form action="modifyEmpF.php" method="POST" class="form-horizontal form-label-left" novalidate>
+                    <form action="empDetailsN.php" method="POST" class="form-horizontal form-label-left" novalidate>
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="empNo">Emp No<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="empNo" name="empNo" class="form-control col-md-7 col-xs-12" data-validate-length-range="10" required="required" type="text" <?php echo "value='".$empNo."'>";?>
+                          <input id="empNo" name="empNo" class="form-control col-md-7 col-xs-12" data-validate-length-range="10" readonly="readonly" type="text" <?php echo "value='".$empNo."'>";?>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="10" required="required" type="text" <?php echo "value='".$name."'>";?>
+                          <input id="name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="10" readonly="readonly"  type="text" <?php echo "value='".$name."'>";?>
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">NIC <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="name" name="nic" class="form-control col-md-7 col-xs-12" data-validate-length-range="10" required="required" type="text" <?php echo "value='".$nic."'>";?>
+                          <input id="name" name="nic" class="form-control col-md-7 col-xs-12" data-validate-length-range="10" readonly="readonly" type="text" <?php echo "value='".$nic."'>";?>
                         </div>
                       </div>
                       <div class="item form-group">

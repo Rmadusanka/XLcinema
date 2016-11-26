@@ -1,3 +1,20 @@
+<?php
+require_once 'connectionF.php';
+
+  $empNo=$_POST['empNo'];
+  $username = '';
+  $password = '';
+  $sql="SELECT Username,Password FROM admin WHERE Emp_No LIKE '%".$empNo."%'; ";
+  $result = mysqli_query($conn, $sql);
+  if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+        $row = mysqli_fetch_assoc($result);
+        $username = $row["Username"];
+        $password = $row["Password"];
+  }else{
+    echo "<script type='text/javascript'>alert('No such Employee!')</script>";
+  }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -105,8 +122,7 @@
               </div>
 
               <ul class="nav navbar-nav navbar-right">
-                <li class="">
-                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="javascript:;"> Profile</a></li>
                     <li>
                       <a href="javascript:;">
@@ -129,7 +145,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Search Admin</h3>
+                <h3>Serach Admin</h3>
               </div>
               <form action="searchAdminF.php" method="POST" class="form-horizontal form-label-left" novalidate>
                   <div class="title_right">
@@ -156,23 +172,23 @@
 
                     <form class="form-horizontal form-label-left" novalidate>
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="username">Userame <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="username">Username
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="username" name="username" class="form-control col-md-7 col-xs-12" required="required" type="text">
+                          <input id="username" name="username" class="form-control col-md-7 col-xs-12" data-validate-length-range="10" class="form-control" readonly="readonly" type="text" <?php echo "value='".$username."'>";?>
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password">Password <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password">Password
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="password" name="password" class="form-control col-md-7 col-xs-12" data-validate-length-range="10"  required="required" type="text">
+                          <input id="password" name="password" class="form-control col-md-7 col-xs-12" data-validate-length-range="10" class="form-control" readonly="readonly" type="text" <?php echo "value='".$password."'>";?>
                         </div>
                       </div>
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">
-                          <form action="cancel.php"><button type="submit" class="btn btn-primary">Cancel</button></form>
+                          <button type="submit" class="btn btn-primary">Cancel</button>
                         </div>
                       </div>
                     </form>
@@ -240,5 +256,6 @@
       });
     </script>
     <!-- /validator -->
+    <?php mysqli_close($conn); ?>
   </body>
 </html>
