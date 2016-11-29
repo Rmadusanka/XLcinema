@@ -1,10 +1,13 @@
+
+
+
+
 <?php
 // define variables and set to empty values
 $fnameErr = $lnameErr  = $nicErr = $mobileErr = $cphoneErr = $passwordErr = $cpasswordErr = $emailErr = $cemailErr = "";
 $fname = $lname  = $nic  = $mobile = $cphone = $password = $cpassword = $email = $cemail =   "";
 $course = array();
-//var_dump($_POST['gender']);
-//exit;
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
     $variables = array();
@@ -13,16 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $errors = validate_errors($variables);
 
     if (count($errors) == 0) {
-        //database operation
-        //exit;
+
     }
 }
 function clean($data) {
     $data = strip_tags(htmlspecialchars(stripslashes(trim($data))));
-    //trim :- Strip whitespace (or other characters) from the beginning and end of a string
-    //The stripslashes() function removes backslashes.Prevents XSS
-    //htmlspecialchars :- Converts the predefined characters "<" (less than) and ">" (greater than) to HTML entities:< (less than) becomes &lt; and > (greater than) becomes &gt;Helps in preventing XSS
-    //The strip_tags() function strips a string from HTML, XML, and PHP tags.
     return $data;
 }
 
@@ -78,9 +76,9 @@ function validateFirstName($firstname){
 
 function validateLastName($lastname){
 
-    if(empty($$lastname)){
+    if(empty($lastname)){
         global $lnameErr;
-        $lnameErr = "First name is required";
+        $lnameErr = "Last name is required";
         return $lnameErr;
     } else if (!preg_match("/^[a-zA-Z ]*$/", $lastname)){ // check if name only contains letters and whitespace.Performs a regular expression match
         global $lnameErr;
@@ -100,9 +98,9 @@ function validateNIC($nicNo) {
         global $nicErr;
         $nicErr = "Username is required";
         return $nicErr;
-    } else if (!preg_match("/^\d{10}$/", $nicNo)){ // checks if username contains only letters and digits
+    } else if (!preg_match("/^\d{9}$/", $nicNo)){ // checks if username contains only letters and digits
         global $nicErr;
-        $nicErr = "you have entered Invalid Mobile Number";
+        $nicErr = "you have entered Invalid NIC ";
         return $nicErr;
     } else {
         global $nic;
@@ -351,7 +349,7 @@ function validateConfirmEmail($cumail){
 
                         </li>
                         <li>
-                            <label id="mobile" >Mobile : </label>
+                            <label id="mobile" >Mobile : </label>*
                             <input type="text" name="mobile"><span style="color: red"><?php echo $mobileErr; ?></span>
                         </li>
                         <li>
@@ -402,6 +400,26 @@ function validateConfirmEmail($cumail){
 
 
                 </form>
+
+        <?php
+        ob_start();
+        include("connect.php");
+        if( ($fname != '') && ($lname != '')  &&($nic !='')   &&($mobile != '')  && ($cphone != '')  && ($password != '')
+        && ($cpassword != '') &&($email != '') &&($cemail != '')){
+
+            include('insertNewUSer.php');
+
+
+
+
+
+        }
+
+        ob_end_flush();
+        ?>
+
+
+
             </div>
 
 
