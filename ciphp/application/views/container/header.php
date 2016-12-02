@@ -3,7 +3,7 @@
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.php">
+			<a href="../pages/home.php">
 				<h1>EXCEL CINEMA</h1>
 				<div class="clear"> </div>
 			 </a>

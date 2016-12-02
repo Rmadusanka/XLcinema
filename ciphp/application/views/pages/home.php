@@ -6,11 +6,46 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-    <link href="../../../css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="../../../css/owl.carousel.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../../../css/magnific-popup.css">
-    <script type="text/javascript" src="../../../js/jquery.min.js"></script>
-    <script src="../../../js/owl.carousel.js"></script>
+
+    <link rel = "stylesheet" type = "text/css"
+          href = "<?php echo base_url(); ?>css/style.css">
+
+    <!--BOOTSTRAP STYLES-->
+    <link rel = "stylesheet" type = "text/css"
+          href = "<?php echo base_url(); ?>css/bootstrap.css">
+
+    <!-- FONTAWESOME STYLES-->
+    <link rel = "stylesheet" type = "text/css"
+          href = "<?php echo base_url(); ?>css/font-awesome.css">
+
+
+    <!-- GOOGLE FONTS-->
+    <link rel = "stylesheet" type = "text/css"
+          href = "<?php echo base_url(); ?>http://fonts.googleapis.com/css?family=Open+Sans">
+
+
+
+    <link rel = "stylesheet" type = "text/css"
+          href = "<?php echo base_url(); ?>css/owl.carousel.css">
+
+    <link rel = "stylesheet" type = "text/css"
+          href = "<?php echo base_url(); ?>css/magnific-popup.css">
+
+    <link rel = "stylesheet" type = "text/css"
+          href = "<?php echo base_url(); ?>css/buyTicketLogging.css">
+
+
+    <script type = 'text/javascript' src = "<?php echo base_url();
+    ?>js/jquery.min.js"></script>
+    <script type = 'text/javascript' src = "<?php echo base_url();
+    ?>js/owl.carousel.js"></script>
+
+
+
+
+
+
+
     <script>
         $(document).ready(function() {
             $("#owl-demo").owlCarousel({
@@ -28,6 +63,7 @@
     </script>
     <!-- //Owl Carousel Assets -->
     <!--768px-menu-->
+
     <link type="text/css" rel="stylesheet" href="../../../css/jquery.mmenu.all.css" />
     <script type="text/javascript" src="../../../js/jquery.mmenu.js"></script>
     <script type="text/javascript">
@@ -67,11 +103,11 @@
             <nav id="menu-left">
                 <ul>
                     <li class="active"><a href="home.php">Home</a></li>
-                    <li><a href="about.html">About us</a></li>
+                    <li><a href="about">About us</a></li>
                     <li><a href="services.html">Gallary</a></li>
                     <li><a href="pages.html">Movies</a></li>
                     <li><a href="blog.html">Offers</a></li>
-                    <li><a href="blog.html">Buy Tickets</a></li>
+                    <li><a href="buyTicket">Buy Tickets</a></li>
                     <li><a href="blog.html">News</a></li>
                     <li><a href="contact.html">Contact us</a></li>
                 </ul>
@@ -86,7 +122,7 @@
                     <li><a href="services.html">Gallary</a></li>
                     <li><a href="pages.html">Movies</a></li>
                     <li><a href="blog.html">Offers</a></li>
-                    <li><a href="blog.html">Buy Tickets</a></li>
+                    <li><a href="../../pages/buyTicket">Buy Tickets</a></li>
                     <li><a href="blog.html">News</a></li>
                     <li><a href="contact.html">Contact us</a></li>
                 </ul>
@@ -124,9 +160,9 @@
     <div class="clear"> </div>
 </div>
 <!--slider-->
-<link rel="stylesheet" href="css/slippry.css">
-<script src="js/jquery-ui.js" type="text/javascript"></script>
-<script src="js/scripts-f0e4e0c2.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../../css/slippry.css">
+<script src="../../../js/jquery-ui.js" type="text/javascript"></script>
+<script src="../../../js/scripts-f0e4e0c2.js" type="text/javascript"></script>
 <script>
     jQuery('#jquery-demo').slippry({
         // general elements & wrapper
@@ -155,8 +191,8 @@
             <div id="owl-demo" class="owl-carousel">
                 <div class="item">
                     <div class="cau_left">
-                        <div id="nivo-lightbox-demo"> <p> <a href="images/11.jpg" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo"> <span class="rollover"> </span></a> </p></div>
-                        <img src="images/1.jpg" >
+                        <div id="nivo-lightbox-demo"> <p> <a href="../../../images/11.jpg" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo"> <span class="rollover"> </span></a> </p></div>
+                        <img src="../../../images/1.jpg" >
                     </div>
                     <div class="cau_left">
                         <h4><a href="#">Lorem ipsum</a></h4>
@@ -167,8 +203,8 @@
                 </div>
                 <div class="item">
                     <div class="cau_left">
-                        <div id="nivo-lightbox-demo"> <p> <a href="images/22.jpg" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo"> <span class="rollover"> </span></a> </p></div>
-                        <img src="images/2.jpg" >
+                        <div id="nivo-lightbox-demo"> <p> <a href="../../../images/22.jpg" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo"> <span class="rollover"> </span></a> </p></div>
+                        <img src="../../../images/2.jpg" >
                     </div>
                     <div class="cau_left">
                         <h4><a href="#">Lorem ipsum</a></h4>
@@ -179,8 +215,8 @@
                 </div>
                 <div class="item">
                     <div class="cau_left">
-                        <div id="nivo-lightbox-demo"> <p> <a href="images/33.jpg" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo"> <span class="rollover"> </span></a> </p></div>
-                        <img src="images/3.jpg" >
+                        <div id="nivo-lightbox-demo"> <p> <a href="../../../images/33.jpg" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo"> <span class="rollover"> </span></a> </p></div>
+                        <img src="../../../images/3.jpg" >
                     </div>
                     <div class="cau_left">
                         <h4><a href="#">Lorem ipsum</a></h4>
