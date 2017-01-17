@@ -8,11 +8,11 @@ require_once 'connectionF.php';
   if (mysqli_num_rows($result1) > 0) {
     $sql2="DELETE FROM employee WHERE Emp_No LIKE '%".$empNo."%';";
     $result2 = mysqli_query($conn, $sql2);
-      if ($result2){
-          echo "<script type='text/javascript'>alert('successfully Deleted!')</script>";
-      }else{
-          echo "<script type='text/javascript'>alert('Failed!')</script>";
-      }
+    if ($result2){
+      echo "<script type='text/javascript'>alert('successfully Deleted!')</script>";
+    }else{
+      echo "<script type='text/javascript'>alert('Failed!')</script>";
+    }
   }else{
       echo "<script type='text/javascript'>alert('No such Employee!')</script>";
     }
